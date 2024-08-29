@@ -3,44 +3,50 @@ let qrImage = document.getElementById("qrImage");
 let qrText = document.getElementById("qrText");
 
 function generateQRCode() {
-  if (qrText.value.length > 0) {
-    qrImage.src =
-      "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
-      qrText.value;
+  const text = qrText.value.trim();
+  if (text.length > 0) {
+    // Generate the QR code URL using quickchart.io
+    qrImage.src = "https://quickchart.io/qr?text=" + encodeURIComponent(text);
     imgBox.classList.add("show-img");
+    // Enable the download button after generating the QR code
+    document.getElementById("down").disabled = false;
   } else {
     qrText.classList.add("error");
     setTimeout(() => {
       qrText.classList.remove("error");
     }, 1000);
+    // Disable the download button if no QR code is generated
+    document.getElementById("down").disabled = true;
   }
 }
 
-// const downloadLinks = document.querySelectorAll("[download-link]");
-// downloadLinks.forEach((button) => {
-//   const id = button.dataset.download;
-//   const img = document.getElementById(id);
-//   const a = document.createElement("a");
-//   a.href = img.src;
-//   a.download = "";
-//   a.style.display = "none";
-//   button.addEventListener("click", () => {
-//     document.body.appendChild(a);
-//     a.click();
-//     document.body.removeChild(a);
-//   });
-// });
-function downloadQRCode() {
+async function downloadQRCode() {
   const qrImageElement = document.getElementById("qrImage");
-  const a = document.createElement("a");
-  a.href = qrImageElement.src;
-  a.download = "qr_code.png";
-  a.style.display = "none";
-  document.body.appendChild(a);
-
-  // Use a timeout to delay the click, allowing the user to see the QR code
-  setTimeout(() => {
-    a.click();
-    document.body.removeChild(a);
-  }, 500); // Adjust the timeout as needed
+  if (qrImageElement.src) {
+    try {
+      const response = await fetch(qrImageElement.src);
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "qr_code.png"; // Specify the filename for the download
+        a.style.display = "none"; // Hide the anchor element
+        document.body.appendChild(a); // Add the anchor element to the DOM
+        a.click(); // Trigger the download
+        document.body.removeChild(a); // Remove the anchor element from the DOM
+        URL.revokeObjectURL(url); // Clean up the object URL
+      } else {
+        alert("Failed to download QR code image.");
+      }
+    } catch (error) {
+      console.error("Error fetching the QR code image:", error);
+      alert("Error downloading QR code image.");
+    }
+  } else {
+    alert("Please generate a QR code first.");
+  }
 }
+
+// Disable the download button initially
+document.getElementById("down").disabled = true;
