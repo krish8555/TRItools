@@ -1,0 +1,2 @@
+# TRItools
+ TriTool is a versatile web-based application designed to streamline productivity and enhance security. It offers three essential functionalities:  QR Code Generator: Easily create custom QR codes for various purposes, such as sharing contact information, linking to websites, or embedding data. Password Generator: Generate strong, secure passwords with customizable complexity to protect your online accounts. To-Do List: Organize and manage tasks effectively, setting priorities, deadlines, and reminders to stay on top of your workload.
