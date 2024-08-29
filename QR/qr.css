@@ -68,3 +68,23 @@ body {
   border: 1px solid #d1d1d1;
   max-height: 350px;
 }
+.error {
+  animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-5px) translateY(5px);
+  }
+  50% {
+    transform: translateX(5px) translateY(-5px);
+  }
+  75% {
+    transform: translateX(-5px) translateY(5px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
