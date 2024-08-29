@@ -15,3 +15,32 @@ function generateQRCode() {
     }, 1000);
   }
 }
+
+// const downloadLinks = document.querySelectorAll("[download-link]");
+// downloadLinks.forEach((button) => {
+//   const id = button.dataset.download;
+//   const img = document.getElementById(id);
+//   const a = document.createElement("a");
+//   a.href = img.src;
+//   a.download = "";
+//   a.style.display = "none";
+//   button.addEventListener("click", () => {
+//     document.body.appendChild(a);
+//     a.click();
+//     document.body.removeChild(a);
+//   });
+// });
+function downloadQRCode() {
+  const qrImageElement = document.getElementById("qrImage");
+  const a = document.createElement("a");
+  a.href = qrImageElement.src;
+  a.download = "qr_code.png";
+  a.style.display = "none";
+  document.body.appendChild(a);
+
+  // Use a timeout to delay the click, allowing the user to see the QR code
+  setTimeout(() => {
+    a.click();
+    document.body.removeChild(a);
+  }, 500); // Adjust the timeout as needed
+}

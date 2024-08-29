@@ -14,6 +14,17 @@
         <img src="" id="qrImage" />
       </div>
       <button onclick="generateQRCode()">Generate QR CODE</button>
+      <br />
+      <br />
+
+      <button
+        class="down"
+        id="down"
+        data-download="qrImage"
+        onclick="downloadQRCode()"
+      >
+        Download QR CODE
+      </button>
     </div>
     <script src="qr.js"></script>
   </body>
