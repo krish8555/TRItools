@@ -81,13 +81,13 @@ h1 {
 #generate {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: rgb(17, 14, 6);
-  color: red;
+  background-color: rgb(212, 0, 255);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 #generate:hover {
-  background-color: yellow;
+  background-color: rgb(255, 196, 0);
 }
