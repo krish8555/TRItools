@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #262a2f;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.password-box {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#password {
+  font-size: 18px;
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#copy {
+  padding: 10px;
+  background-color: #00f7ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#copy:hover {
+  background-color: #0fb300;
+}
+
+.checkboxes {
+  margin: 20px 0;
+}
+
+.checkboxes label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(236, 25, 25);
+  cursor: pointer;
+}
+
+#generate {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(17, 14, 6);
+  color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#generate:hover {
+  background-color: yellow;
+}
