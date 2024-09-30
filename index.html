@@ -3,35 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRITOOLS</title>
-    <link rel="stylesheet" href="./index.css" />
+    <title>TriTool - Dark Theme</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="SITES">
-      <div class="site-div">
-        <button
-          class="site-button"
-          onclick="window.location.href='./pass/pass.html'"
-        >
-          PASSWORD GENERATOR
-        </button>
-      </div>
-      <div class="site-div">
-        <button
-          class="site-button"
-          onclick="window.location.href='./QR/qr.html'"
-        >
-          QR CODE GENERATOR
-        </button>
-      </div>
-      <div class="site-div">
-        <button
-          class="site-button"
-          onclick="window.location.href='./TODO/todo.html'"
-        >
-          TODO LIST
-        </button>
+    <nav>
+      <h1>TriTool</h1>
+      <p>
+        Streamlining productivity with QR Code Generator, Password Generator,
+        and To-Do List.
+      </p>
+    </nav>
+
+    <div class="container">
+      <header>
+        <h2>Welcome to TriTool</h2>
+        <p>Developed by Krish Patel & Divyansh Rawat</p>
+      </header>
+
+      <div class="buttons">
+        <button id="qr-btn">QR Code Generator</button>
+        <button id="pwd-btn">Password Generator</button>
+        <button id="todo-btn">To-Do List</button>
       </div>
     </div>
+
+    <footer>
+      <p>&copy; 2024 Krish Patel & Divyansh Rawat. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
