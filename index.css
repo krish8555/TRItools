@@ -55,26 +55,28 @@ header p {
 
 .buttons {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adds space between buttons */
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 20px 40px; /* Larger buttons */
+  font-size: 1.5rem; /* Larger text */
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #00e676;
   color: #121212;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 80%; /* Make the buttons wide, but not full-width */
 }
 
 button:hover {
   background: #00c853;
-  transform: scale(1.1);
+  transform: scale(1.05); /* Subtle hover scaling effect */
 }
 
 footer {
