@@ -87,3 +87,13 @@ footer {
   background-color: #1f1f1f;
   border-top: 2px solid #333;
 }
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.center-image img {
+  width: 150px;
+  height: auto;
+}
