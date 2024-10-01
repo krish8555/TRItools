@@ -1,11 +1,11 @@
 document.getElementById("qr-btn").onclick = function () {
-  window.location.href = "../QR/qr.html"; // Link to QR Code Generator Page
+  window.location.href = "https://krish8555.github.io/TRItools/QR/qr.html"; // Link to QR Code Generator Page
 };
 
 document.getElementById("pwd-btn").onclick = function () {
-  window.location.href = "../Pass/pass.html";
+  window.location.href = "https://krish8555.github.io/TRItools/Pass/pass.html";
 };
 
 document.getElementById("todo-btn").onclick = function () {
-  window.location.href = "../todo/todo.html";
+  window.location.href = "https://krish8555.github.io/TRItools/TODO/todo.html";
 };
